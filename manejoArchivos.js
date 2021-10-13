@@ -5,14 +5,24 @@ class Contenedor {
         this.ruta = nombreArchivo
     }
 
-    save = async persona => {
-        const arrContenedor = await this.getAll()
+    save = async objeto => {
 
-        arrContenedor.push(persona)
+        const arrContenedor = await this.getAll()
+        /* const objeto = {title: "remera1", price: 2250, thumbnail: "https://d3ugyf2ht6aenh.cloudfront.net/stores/903/627/products/hunter-characters1-9275a24c4ee1ee9ba816058149057716-1024-1024.jpg"} */
+        
+        let id = 0;
+        if (arrContenedor.length === 0 ) {
+            id = 1;
+            objeto["id"] = id;
+        }else{
+            objeto["id"] = arrContenedor [arrContenedor.length -1].id + 1;
+        }
+
+        arrContenedor.push(objeto)
 
         try {
             await fs.promises.writeFile(this.ruta, JSON.stringify(arrContenedor, null, 2))
-            return persona.nombre 
+            return objeto.id 
         } catch (error) {
             throw new Error('No se pudo guardar')
         }

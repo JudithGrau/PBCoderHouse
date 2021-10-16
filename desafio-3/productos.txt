@@ -1,0 +1,20 @@
+[
+  {
+    "title": "remera anime1",
+    "price": 2250,
+    "thumbnail": "https://d3ugyf2ht6aenh.cloudfront.net/stores/903/627/products/hunter-characters1-9275a24c4ee1ee9ba816058149057716-1024-1024.jpg",
+    "id": 1
+  },
+  {
+    "title": "remera anime2",
+    "price": 2250,
+    "thumbnail": "https://d3ugyf2ht6aenh.cloudfront.net/stores/903/627/products/hunter-characters1-9275a24c4ee1ee9ba816058149057716-1024-1024.jpg",
+    "id": 2
+  },
+  {
+    "title": "remera anime3",
+    "price": 2250,
+    "thumbnail": "https://d3ugyf2ht6aenh.cloudfront.net/stores/903/627/products/hunter-characters1-9275a24c4ee1ee9ba816058149057716-1024-1024.jpg",
+    "id": 3
+  }
+]

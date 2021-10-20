@@ -1,4 +1,4 @@
-const Contenedor = require('./manejoArchivos')
+const Contenedor = require('./contenedor')
 const db = new Contenedor('miArchivo')
 
 const test = async () => {

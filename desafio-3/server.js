@@ -1,50 +1,27 @@
-const fs = require('fs')
 const express = require('express')
-
 const app = express()
 
-const randomNumber = (min, max) => {
-    return Math.round(Math.random() * ((max) - min) + min)
-}
+const Contenedor = require('../desafio-2/contenedor')
+const productos = new Contenedor('./productos.txt')
 
 app.get('/', (req,res) => {
     res.send('<h1 style="color:orangered;">Bienvenidos al desafío 3: Servidor con  Express</h1>')
 })
 
-app.get('/productos', (req, res)=>{
-    try{
-        const lectura = fs.readFileSync('./productos.txt', 'utf-8')
-        const productos = JSON.parse(lectura)
-
-        const respuesta = JSON.stringify({
-            items: productos,
-            cantidad: productos.length
-        }, null, 4)
-        res.send(respuesta)
-
-    }catch(error){
-        console.log(error)
-        res.send(`Productos no encontrados`)
-    }
-
+app.get('/productos', async (req, res)=>{
+    const response = await productos.getAll()
+    res.json({ response})
 })
 
-app.get('/productos-random', (req, res)=>{
-    try{
-        const lectura = fs.readFileSync('./productos.txt', 'utf-8')
-        const productos = JSON.parse(lectura)
+app.get('/productos-random', async (req, res)=>{
+        const arrayContenedor = await productos.getAll()
 
-        const num = randomNumber(0, productos.length - 1)
+        const min =1
+        const max = arrayContenedor.length + 1
+        const num = Math.floor(Math.random() * (max - min)) + min
 
-        const respuesta = JSON.stringify({
-            item: productos[num]
-        })
-        res.send(respuesta) 
-
-    }catch(error){
-        console.log(error)
-        res.send(`Productos no encontrados`)
-    }
+        const response = await productos.getById(num)
+        res.json({ response }) 
 })
 
 const PORT = 8080

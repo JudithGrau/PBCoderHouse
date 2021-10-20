@@ -43,12 +43,19 @@ class Contenedor {
 
 
     getById = async id => {
-        const arrContenedor = await this.getAll()
-
-        const idBuscado = arrContenedor.find( p => p.id === id)
-
-        return idBuscado
-
+        try {
+            const arrContenedor = await this.getAll()
+    
+            const idBuscado = arrContenedor.find( p => p.id === id)
+    
+            if (idBuscado){
+                return idBuscado
+            } else {
+                return null
+            }
+        } catch (err) {
+            console.log("Error al obtener por id: " + err);
+        }
     }
 
     deleteById = async id => {

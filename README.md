@@ -13,6 +13,7 @@ El formato del servidor será un proyecto consistente en una estructura de archi
 - Manejo de Archivos en Javascript: programación sincrónica y asincrónica (funciones, callbacks, promesas, ejecución sincrónica y asincrónica, manejo de archivos en Node.js).
 - Servidores Web (Creación de un servidor web usando el módulo HTTP y otro usando el módulo Express, y despliegue de la aplicación en la nube (Glitch)).
 - Express avanzado (Aplicaciones Restful, Manejo de peticiones HTTP con Express, uso de Postman o thunder-client, Express Router, express.static, Capas Middleware, Uso de Multer).
+- Motores de búsquedas (motor de plantillas Handlebars, Pug y Ejs; sintaxis y usos, e integrarlos a Express).
 
 
 ## Lenguajes y Herramientas utilizadas:

@@ -1,0 +1,40 @@
+<style>
+    .table td, .table th {
+        vertical-align: middle;
+    }
+    .table{
+        background-color: rgba(255, 68, 0, 0.521);
+    }
+    h2 {
+        color: orangered;
+    }
+    hr {
+        background-color: #ddd;
+    }
+    .jumbotron {
+        min-height: 90vh;
+        background-color: yellow;
+        border-radius: 15px;
+        box-shadow: rgba(0,0,0,0.3)0px 19px 38px,
+        rgba(0,0,0,0.22)0px 15px 12px;
+    }
+</style>
+
+<div class="jumbotron">
+    <h2>Vista de Productos</h2>
+    <br>
+
+    {{#if hayProductos}} 
+        <div class="table-responsive">
+            <table class="table">
+                <tr> <th>Nombre</th> <th>Precio</th> <th>Foto</th></tr>
+                {{#each hayProductos}}
+                    <tr> <td>{{this.title}}</td> <td>${{this.price}}</td> <td><img width="100" src={{this.thumbnail}} alt="not found"></td> </tr>
+                {{/each}}
+            </table>
+        </div>
+    {{else}}  
+        <h4 class="alert alert-danger">No hay productos</h4>
+    {{/if}}
+    <a href="/" class="btn btn-info m-3">Volver</a>
+</div>

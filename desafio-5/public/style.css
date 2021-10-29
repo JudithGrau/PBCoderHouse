@@ -1,0 +1,11 @@
+.form-group a{
+    background-color: rgb(255, 102, 0);
+    color: white;
+}
+.jumbotron{
+    background-color: yellow;
+    color: orangered; 
+    border-radius: 15px; 
+    box-shadow: rgba(0,0,0,0.3)0px 19px 38px,
+    rgba(0,0,0,0.22)0px 15px 12px;
+}

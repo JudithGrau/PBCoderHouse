@@ -1,0 +1,28 @@
+extends index 
+
+block partial
+    -const jtron = "background-color: yellow; border-radius: 15px; box-shadow: rgba(0,0,0,0.3)0px 19px 38px, rgba(0,0,0,0.22)0px 15px 12px;"
+    div(class="jumbotron" style= jtron)
+        -const tit = "color: orangered"
+        h2(style= tit)="Vista de Productos"
+        br
+
+        if hayProductos 
+            div(class="table-responsive")
+            -const estilo = "background-color: orangered"
+                table(class="table" style= estilo)
+                    tr 
+                        th="Nombre"
+                        th="Precio"
+                        th="Foto"
+                    each prod in hayProductos
+                        tr 
+                            td=prod.title
+                            td="$"+prod.price 
+                            td 
+                                img(width="100" src=prod.thumbnail)
+
+        else 
+            h4(class="alert alert-danger")="No hay productos"
+            
+        a(href="/" class="btn btn-info m-3")="Volver"

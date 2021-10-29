@@ -7,7 +7,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'))
 
 app.get('/', (req, res)=>{
-    res.send('Bienvenidos al desafío 8')
+    res.send('Bienvenidos al desafío 4')
 })
 
 const router = require('./routes/router')

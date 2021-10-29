@@ -4,7 +4,7 @@ const router = express.Router()
 const productos = require('../api/productos')
 
 //devuelve todos los productos
-router.get('/', (req, res)=>{
+router.get('/productos/', (req, res)=>{
 
     const items = productos.listar
     if (items.length > 0) {
@@ -17,7 +17,7 @@ router.get('/', (req, res)=>{
 })
 
 //devuelve un producto según su id
-router.get('/:id', (req, res)=>{
+router.get('/productos/:id', (req, res)=>{
     
     const item = productos.listarId(req.params.id)
 
@@ -31,19 +31,19 @@ router.get('/:id', (req, res)=>{
 })
 
 //recibe y agrega un producto, y lo devuelve con su id
-router.post('/guardar', (req, res) => {
+router.post('/productos/', (req, res) => {
     const newItem = productos.agregar(req.body)
     res.json(newItem)
 })
 
 //recibe y actualiza un producto segun su id
-router.put('/actualizar/:id', (req, res) => {
+router.put('/productos/:id', (req, res) => {
     const item = productos.actualizar(req.body, req.params.id)
     res.json(item)
 })
 
 //elimina un producto segun su id
-router.delete('/borrar/:id', (req, res) => {
+router.delete('/productos/:id', (req, res) => {
     const item = productos.borrar(req.params.id)
     res.json(item)
 })

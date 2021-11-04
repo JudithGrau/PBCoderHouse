@@ -29,7 +29,7 @@ El formato del servidor será un proyecto consistente en una estructura de archi
 <a href="https://www.w3.org/html/" target="_blank"> <img src="https://microdevs.com/wp-content/themes/microdevs-theme/images/html-logo.png" alt="html5" width="40" height="40"/> </a> 
 <a href="https://postman.com" target="_blank"> <img src="https://microdevs.com/wp-content/themes/microdevs-theme/images/css3.png" alt="socket.io" width="40" height="40"/> </a> 
 <a href="https://postman.com" target="_blank"> <img src="https://akashdecoder.github.io/mainimages/git.jpg" alt="postman" width="40" height="40"/> </a> 
-<a href="https://postman.com" target="_blank"> <img src="https://trabpukcip.gallerycdn.vsassets.io/extensions/trabpukcip/vscode-npm-scripts/0.2.1/1526255468123/Microsoft.VisualStudio.Services.Icons.Default " alt="postman" width="40" height="40"/> </a>
+<a href="https://postman.com" target="_blank"> <img src="https://authy.com/wp-content/uploads/npm-logo.png" alt="postman" width="40" height="40"/> </a>
 <a href="https://postman.com" target="_blank"> <img src="https://aulapp.ovh/exelearning/Visual_Studio_Code_1.18_icon.svg" alt="postman" width="40" height="40"/> </a>
 </p>
 
